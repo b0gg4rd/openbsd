@@ -1,0 +1,11 @@
+#!/bin/ksh
+#
+# .kshrc
+#
+
+# Invocation to global initialization
+. /etc/ksh.kshrc
+
+# User specific aliases and functions
+alias ls='/usr/local/bin/colorls -G'
+alias ll='ls -alh'

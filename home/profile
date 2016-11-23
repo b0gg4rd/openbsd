@@ -1,0 +1,37 @@
+# $OpenBSD: dot.profile,v 1.4 2005/02/16 06:56:57 matthieu Exp $
+#
+# sh/ksh initialization
+
+PATH=$HOME/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/games:.
+export PATH HOME TERM
+
+# Global initialization
+. /etc/ksh.kshrc
+
+PS1="\u:\W\$ "
+
+# User specific aliases and functions
+alias ls='/usr/local/bin/colorls -G'
+alias ll='ls -alh'
+
+# User specific environment and startup programs
+#export EDITOR=vim
+#export VISUAL=vim
+export SVN_EDITOR=vim
+export GIT_EDITOR=vim
+
+# Java
+export JAVA_HOME=$HOME/Development/java/jdk
+export PATH=${JAVA_HOME}/bin:${PATH}
+
+# Groovy
+export GROOVY_HOME=$HOME/Development/groovy/apache-groovy
+export PATH=${GROOVY_HOME}/bin:${PATH}
+
+# Gradle
+export GRADLE_HOME=$HOME/Development/java/gradle/gradle
+export PATH=${GRADLE_HOME}/bin:${PATH}
+
+# Apache Spark
+export SPARK_HOME=$HOME/Development/apache-spark/spark
+export PATH=${SPARK_HOME}/bin:${PATH}
